@@ -1,0 +1,10 @@
+C:\Users\Asus\source\repos\ProjectA\ProjectA\bin\Debug\ProjectA.exe.config
+C:\Users\Asus\source\repos\ProjectA\ProjectA\bin\Debug\ProjectA.exe
+C:\Users\Asus\source\repos\ProjectA\ProjectA\bin\Debug\ProjectA.pdb
+C:\Users\Asus\source\repos\ProjectA\ProjectA\obj\Debug\ProjectA.csprojAssemblyReference.cache
+C:\Users\Asus\source\repos\ProjectA\ProjectA\obj\Debug\ProjectA.Form1.resources
+C:\Users\Asus\source\repos\ProjectA\ProjectA\obj\Debug\ProjectA.Properties.Resources.resources
+C:\Users\Asus\source\repos\ProjectA\ProjectA\obj\Debug\ProjectA.csproj.GenerateResource.cache
+C:\Users\Asus\source\repos\ProjectA\ProjectA\obj\Debug\ProjectA.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\ProjectA\ProjectA\obj\Debug\ProjectA.exe
+C:\Users\Asus\source\repos\ProjectA\ProjectA\obj\Debug\ProjectA.pdb
