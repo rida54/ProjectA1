@@ -69,17 +69,17 @@
     <Compile Include="Evaluations.Designer.cs">
       <DependentUpon>Evaluations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Group.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group.Designer.cs">
+      <DependentUpon>Group.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fyp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fyp.Designer.cs">
       <DependentUpon>Fyp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GroupStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GroupStudent.Designer.cs">
-      <DependentUpon>GroupStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProjectAss.cs">
@@ -101,17 +101,11 @@
     <Compile Include="Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentForm.cs">
+    <Compile Include="GroupStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentForm.Designer.cs">
-      <DependentUpon>StudentForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View.Designer.cs">
-      <DependentUpon>View.cs</DependentUpon>
+    <Compile Include="GroupStudent.Designer.cs">
+      <DependentUpon>GroupStudent.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Advisor.resx">
       <DependentUpon>Advisor.cs</DependentUpon>
@@ -125,11 +119,11 @@
     <EmbeddedResource Include="Evaluations.resx">
       <DependentUpon>Evaluations.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Group.resx">
+      <DependentUpon>Group.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fyp.resx">
       <DependentUpon>Fyp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GroupStudent.resx">
-      <DependentUpon>GroupStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectAss.resx">
       <DependentUpon>ProjectAss.cs</DependentUpon>
@@ -149,11 +143,8 @@
     <EmbeddedResource Include="Student.resx">
       <DependentUpon>Student.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentForm.resx">
-      <DependentUpon>StudentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View.resx">
-      <DependentUpon>View.cs</DependentUpon>
+    <EmbeddedResource Include="GroupStudent.resx">
+      <DependentUpon>GroupStudent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\DataView.datasource" />
     <None Include="Properties\DataSources\Form1.datasource" />

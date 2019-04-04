@@ -20,79 +20,72 @@ namespace ProjectA
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DataView abc = new DataView();
-            abc.ShowDialog();
+            DataView query1 = new DataView();
+            query1.ShowDialog();
             this.Show();
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ProjectView abc = new ProjectView();
-            abc.ShowDialog();
-            this.Show();
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            GroupStudent abc = new GroupStudent();
-            abc.ShowDialog();
+            ProjectView query1 = new ProjectView();
+            query1.ShowDialog();
             this.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Advisor abc = new Advisor();
-            abc.ShowDialog();
+            Advisor query1 = new Advisor();
+            query1.ShowDialog();
             this.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Student abc = new Student();
-            abc.ShowDialog();
+            Student query1 = new Student();
+            query1.ShowDialog();
             this.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Home_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Fyp abc = new Fyp();
-            abc.ShowDialog();
+            GroupStudent query1 = new GroupStudent();
+            query1.ShowDialog();
             this.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ProjectAss abc = new ProjectAss();
-            abc.ShowDialog();
+            ProjectAss query1 = new ProjectAss();
+            query1.ShowDialog();
             this.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AdvisorAss abc = new AdvisorAss();
-            abc.ShowDialog();
+            AdvisorAss query1 = new AdvisorAss();
+            query1.ShowDialog();
             this.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Evaluations abc = new Evaluations();
-            abc.ShowDialog();
+            Evaluations query1 = new Evaluations();
+            query1.ShowDialog();
+            this.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Group query1 = new Group();
+            query1.ShowDialog();
             this.Show();
         }
     }

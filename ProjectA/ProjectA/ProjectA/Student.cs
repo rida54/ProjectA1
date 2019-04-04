@@ -90,6 +90,8 @@ namespace ProjectA
             {
                 gvStudent.DataSource = table;
             }
+        
+        
             
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.Text = "Edit";
@@ -210,7 +212,8 @@ namespace ProjectA
                     {
                         //     conn.Open();
                         //create a query for retrieving data in the database.
-                        query = "SELECT * FROM Person";
+                        query ="select Person.Id,Person.FirstName, Person.LastName, Person.Contact , Person.Email ,Person.DateOfBirth , Person.Gender , Student.RegistrationNo  from Person join Student ON Person.Id = Student.Id ";
+
                         //initialize new Sql commands
                         //SqlCommand cmd = new SqlCommand();
                         //hold the data to be executed.

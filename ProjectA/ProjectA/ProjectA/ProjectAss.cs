@@ -28,25 +28,18 @@ namespace ProjectA
             // Add the parameters if required
 
             //string query = "INSERT into GroupStudent(GroupId, StudentId, Status, AssignmentDate) values ((Select Id from Group WHERE Created_On = @Created_On), (Select Id from Student WHERE RegistrationNo = @RegistrationNo), (Select Id FROM Lookup WHERE Category ='Status' AND Value=@Value), @AssignmentDate)";
-           string query = "INSERT INTO Project(Title, Description ) VALUES(@Title, @Description)";
-            SqlCommand str = new SqlCommand(query, conn);
-            // Add the parameters if required
-
-            str.Parameters.Add(new SqlParameter("@Title", textBox1.Text));
-            str.Parameters.Add(new SqlParameter("@Description", textBox2.Text));
-
+           
 
 
             //string q = "insert into Group(Created_On) VALUES(@Created_On)";
 
             //SqlCommand com = new SqlCommand(q, conn);
             //com.Parameters.Add(new SqlParameter("@Created_On", textBox4.Text));
-            string query1 = "INSERT INTO GroupProject(GroupId, ProjectId, AssignmentDate) VALUES((Select Id from dbo.Group join GroupProject ON Group.Id=GroupProject.GroupId),(Select Id from Project join GroupProject ON Project.Id=GroupProject.ProjectId), @AssignmentDate)";
+            string query1 = "INSERT INTO GroupProject(GroupId, ProjectId, AssignmentDate) VALUES((Select Id from [Group] WHERE Id = '" + textBox6.Text + "'),(Select Id from [Project] WHERE Title = '" + textBox4.Text + "'), @AssignmentDate)";
            // string query1 = "INSERT INTO GroupProject(AssignmentDate) VALUES(@AssignmentDate)";
             SqlCommand com1 = new SqlCommand(query1, conn);
             com1.Parameters.Add(new SqlParameter("@AssignmentDate", textBox3.Text));
 
-            int i = str.ExecuteNonQuery();
            // int l = com.ExecuteNonQuery();
             int k = com1.ExecuteNonQuery();
 
@@ -62,12 +55,12 @@ namespace ProjectA
 
                 conn.Close();
 
-                if (i != 0)
+                if (k != 0)
                 {
-                    MessageBox.Show(i + " Student Details Saved");
+                    MessageBox.Show(k + " Student Details Saved");
                 }
 
-                GroupStudent query2 = new GroupStudent();
+                ProjectAss query2 = new ProjectAss();
                 query2.ShowDialog();
                 this.Show();
 
@@ -79,7 +72,7 @@ namespace ProjectA
             SqlConnection conn = new SqlConnection(cmd);
             conn.Open();
             //String str = "select Group.Id, Group.Created_On , GroupProject.GroupId, GroupProject.ProjectId , GroupProject.AssignmentDate ,   from Group join GroupProject ON Group.Id = GroupProject.GroupId join Project ON GroupProject.ProjectId = Project.Id";
-            String str = "select *From GroupProject";
+            String str = "select GroupId, ProjectId, AssignmentDate from GroupProject Join [Group] ON [Group].Id=GroupProject.GroupId;";
             SqlCommand command = new SqlCommand(str, conn);
             // Add the parameters if required
             //SqlDataReader reader = command.ExecuteReader();
@@ -117,5 +110,44 @@ namespace ProjectA
             abc.ShowDialog();
             this.Show();
         }
+
+        private void Save_Click_1(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(cmd);
+            conn.Open();
+            SqlCommand command = new SqlCommand(cmd, conn);
+           
+            string query1 = "INSERT INTO GroupProject(GroupId, ProjectId, AssignmentDate) VALUES((Select Id from [Group] WHERE Id = '" + textBox6.Text + "'),(Select Id from [Project] WHERE Title = '" + textBox4.Text + "'), @AssignmentDate)";
+            SqlCommand com1 = new SqlCommand(query1, conn);
+            com1.Parameters.Add(new SqlParameter("@AssignmentDate", textBox3.Text));
+
+            // int l = com.ExecuteNonQuery();
+            int k = com1.ExecuteNonQuery();
+
+            {
+                if (MessageBox.Show("Do You want to save it", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    MessageBox.Show("Student is Saved");
+                }
+                else
+                {
+                    MessageBox.Show("Student not saved", "Save Again", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                conn.Close();
+
+                if (k != 0)
+                {
+                    MessageBox.Show(k + " Student Details Saved");
+                }
+
+                ProjectAss query2 = new ProjectAss();
+                query2.ShowDialog();
+                this.Show();
+
+            }
+       
+        
+    }
     }
 }
