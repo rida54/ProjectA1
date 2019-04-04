@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace ProjectA
 {
@@ -170,7 +173,8 @@ namespace ProjectA
                 MessageBox.Show("Please enter your First Name without digits");
                 Names.Select();
             }
-  
+            
+   
             else
             {
                 if (MessageBox.Show("Do You want to save it", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -360,6 +364,16 @@ namespace ProjectA
             abc.ShowDialog();
             this.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            PdfWriter wr = PdfWriter.GetInstance(doc, new FileStream("Test.pdf", FileMode.Create));
+             doc.Open();
+             Paragraph paragraph = new Paragraph("This is report");
+             doc.Add(paragraph);
+            doc.Close();
+                }
     }
     
 }

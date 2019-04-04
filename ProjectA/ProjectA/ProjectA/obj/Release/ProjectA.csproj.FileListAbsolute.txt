@@ -50,3 +50,12 @@ C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\P
 C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\ProjectA.exe
 C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\ProjectA.pdb
 C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\obj\Release\ProjectA.Group.resources
+C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\itextsharp.dll
+C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\itextsharp.pdfa.dll
+C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\itextsharp.xtra.dll
+C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\Jint.dll
+C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\log4net.dll
+C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\Antlr3.Runtime.dll
+C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\itextsharp.xml
+C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\obj\Release\ProjectA.csprojAssemblyReference.cache
+C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\obj\Release\ProjectA.csproj.CopyComplete
