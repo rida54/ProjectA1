@@ -36,7 +36,7 @@ namespace ProjectA
             string q = "Insert into [Group](Created_On) VALUES(@Created_On)";
 
             SqlCommand com = new SqlCommand(q, conn);
-            com.Parameters.Add(new SqlParameter("@Created_On", textBox1.Text));
+            com.Parameters.Add(new SqlParameter("@Created_On", DateTime.Parse(textBox1.Text)));
             int i = com.ExecuteNonQuery();
 
 

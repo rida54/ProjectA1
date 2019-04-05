@@ -370,8 +370,10 @@ namespace ProjectA
             Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
             PdfWriter wr = PdfWriter.GetInstance(doc, new FileStream("Test.pdf", FileMode.Create));
              doc.Open();
-             Paragraph paragraph = new Paragraph("This is report");
-             doc.Add(paragraph);
+            Paragraph paragraph = new Paragraph("This is report");
+            
+            doc.Add(paragraph);
+           
             doc.Close();
                 }
     }

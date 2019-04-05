@@ -38,7 +38,7 @@ namespace ProjectA
             string query1 = "INSERT INTO GroupProject(GroupId, ProjectId, AssignmentDate) VALUES((Select Id from [Group] WHERE Id = '" + textBox6.Text + "'),(Select Id from [Project] WHERE Title = '" + textBox4.Text + "'), @AssignmentDate)";
            // string query1 = "INSERT INTO GroupProject(AssignmentDate) VALUES(@AssignmentDate)";
             SqlCommand com1 = new SqlCommand(query1, conn);
-            com1.Parameters.Add(new SqlParameter("@AssignmentDate", textBox3.Text));
+            com1.Parameters.Add(new SqlParameter("@AssignmentDate", DateTime.Parse(textBox3.Text)));
 
            // int l = com.ExecuteNonQuery();
             int k = com1.ExecuteNonQuery();

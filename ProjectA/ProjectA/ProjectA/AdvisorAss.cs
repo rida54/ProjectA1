@@ -39,6 +39,7 @@ namespace ProjectA
             SqlDataAdapter adapt = new SqlDataAdapter();
             adapt.SelectCommand = command;
             adapt.Fill(table);
+           
 
             if (table.Rows.Count > 0)
 
@@ -78,7 +79,7 @@ namespace ProjectA
 
             string query1 = "INSERT INTO ProjectAdvisor(ProjectId, AdvisorId, AdvisorRole, AssignmentDate) VALUES((Select Id from [Project] WHERE Title = '" + textBox4.Text + "'), (Select Id from [Advisor] WHERE Id = '" + textBox1.Text + "'), (Select Id FROM Lookup WHERE Category ='ADVISOR_ROLE' AND Value=@Value), @AssignmentDate)";
             SqlCommand com1 = new SqlCommand(query1, conn);
-            com1.Parameters.Add(new SqlParameter("@AssignmentDate", textBox3.Text));
+            com1.Parameters.Add(new SqlParameter("@AssignmentDate", DateTime.Parse( textBox3.Text)));
             com1.Parameters.Add(new SqlParameter("@Value", comboBox1.Text));
 
 
@@ -107,6 +108,16 @@ namespace ProjectA
                 this.Show();
 
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

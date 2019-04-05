@@ -33,9 +33,9 @@ namespace ProjectA
             // Add the parameters if required
 
             str.Parameters.Add(new SqlParameter("@Status", comboBox1.Text));
-            str.Parameters.Add(new SqlParameter("@AssignmentDate", textBox3.Text));
+            str.Parameters.Add(new SqlParameter("@AssignmentDate", DateTime.Parse(textBox3.Text)));
             str.Parameters.Add(new SqlParameter("@Value", comboBox1.Text));
-            str.Parameters.Add(new SqlParameter("@Created_On", textBox1.Text));
+            str.Parameters.Add(new SqlParameter("@Created_On", DateTime.Parse(textBox1.Text)));
             int i = str.ExecuteNonQuery();
             {
                 if (MessageBox.Show("Do You want to save it", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

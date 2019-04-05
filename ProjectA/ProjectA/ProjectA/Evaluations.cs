@@ -67,7 +67,7 @@ namespace ProjectA
 
             SqlCommand com = new SqlCommand(q, conn);
             com.Parameters.Add(new SqlParameter("@ObtainedMarks", textBox4.Text));
-            com.Parameters.Add(new SqlParameter("@EvaluationDate", textBox5.Text));
+            com.Parameters.Add(new SqlParameter("@EvaluationDate", DateTime.Parse(textBox5.Text)));
 
             int i = com.ExecuteNonQuery();
 

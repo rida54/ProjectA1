@@ -37,7 +37,7 @@ namespace ProjectA
             str.Parameters.Add(new SqlParameter("@LastName", LastName.Text));
             str.Parameters.Add(new SqlParameter("@Contact", Contact.Text));
             str.Parameters.Add(new SqlParameter("@Email", Email.Text));
-            str.Parameters.Add(new SqlParameter("@DateOfBirth", DOB.Text));
+            str.Parameters.Add(new SqlParameter("@DateOfBirth", DateTime.Parse(DOB.Text)));
             str.Parameters.Add(new SqlParameter("@Gender", comboBox1.Text));
             str.Parameters.Add(new SqlParameter("@Value", comboBox1.Text));
             string q = "insert into Student(Id, RegistrationNo) VALUES((Select Id from Person WHERE Email = @Email ),@RegistrationNo)";
@@ -107,20 +107,26 @@ namespace ProjectA
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            String con = "Data Source=DESKTOP-T3GNBBF\\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True";
-            SqlConnection conn = new SqlConnection(con);
-            conn.Open();
-            string sql = "DELETE FROM Person WHERE Id = @ID";
-            SqlCommand command = new SqlCommand(sql, conn);
-            command.Parameters.Add(new SqlParameter("@Id", ID.Text));
-            command.ExecuteNonQuery();
-            string sql1 = "DELETE FROM Student WHERE Id = @ID";
-            SqlCommand command1 = new SqlCommand(sql1, conn);
-            command1.Parameters.Add(new SqlParameter("@Id", ID.Text));
-            command1.ExecuteNonQuery();
-            gvStudent.DataSource = null;
-            Student_Load(sender, e);
+            try
+            {
+                String con = "Data Source=DESKTOP-T3GNBBF\\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True";
+                SqlConnection conn = new SqlConnection(con);
+                conn.Open();
+                string sql = "DELETE FROM Person WHERE Id = @ID";
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.Add(new SqlParameter("@Id", ID.Text));
+                command.ExecuteNonQuery();
+                string sql1 = "DELETE FROM Student WHERE Id = @ID";
+                SqlCommand command1 = new SqlCommand(sql1, conn);
+                command1.Parameters.Add(new SqlParameter("@Id", ID.Text));
+                command1.ExecuteNonQuery();
+                gvStudent.DataSource = null;
+                Student_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("you cannot delete student from here because of its refrence ");
+            }
 
         }
 
