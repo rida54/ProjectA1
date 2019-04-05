@@ -31,7 +31,10 @@ namespace ProjectA
             object con = null;
             SqlConnection conn = new SqlConnection(cmd);
             conn.Open();
-            String str = "SELECT Evaluation.Id, Evaluation.TotalMarks, Evaluation.Name, Evaluation.TotalWeightage from Evaluation";
+            String str = "SELECT Title , FirstName+''+ LastName AS 'Advisors', (Select Value FRom LookUp Where [LookUP].Id = 'AdvisorRole'" +
+                " AND Category = 'Advisor_Role') AS 'Role', " +
+                "AssignmentDate From((Project JOIN ProjectAdvisor ON PROJECTiD = Id) join" +
+                "  Advisor ON AdvisorId = Advisor.Id) JOIN Person ON Person.Id = Advisor.Id"; 
             SqlCommand command = new SqlCommand(str, conn);
             // Add the parameters if required
             //SqlDataReader reader = command.ExecuteReader();
