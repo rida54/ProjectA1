@@ -23,8 +23,8 @@ namespace ProjectA
             Designation.Items.Add("Assisstant Professor");
             Designation.Items.Add("Lecturer");
             Designation.Items.Add("Industry Professional");
-            
-
+            comboBox1.Items.Add("Male");
+            comboBox1.Items.Add("Female");
         }
         private void Advisor_Load(object sender, EventArgs e)
         {
@@ -167,18 +167,31 @@ namespace ProjectA
             SqlCommand command = new SqlCommand(cmd, conn);
             // Add the parameters if required
 
-           
-            string abc = "INSERT into Advisor(Id, Designation, Salary) values (@Id,(Select Id FROM Lookup WHERE Category = 'Designation' AND Value=@Value),@Salary)";
+            string query = "INSERT into Person(FirstName , LastName , Contact , Email , DateOfBirth , Gender) values (@FirstName ,@LastName, @Contact , @Email, @DateOfBirth, (Select Id FROM Lookup WHERE Category = 'Gender' AND Value=@Value))";
+            SqlCommand str = new SqlCommand(query, conn);
+            //// Add the parameters if required
+
+            str.Parameters.Add(new SqlParameter("@FirstName", FirstName.Text));
+            str.Parameters.Add(new SqlParameter("@LastName", LastName.Text));
+            str.Parameters.Add(new SqlParameter("@Contact", Contact.Text));
+            str.Parameters.Add(new SqlParameter("@Email ", Em.Text));
+            str.Parameters.Add(new SqlParameter("@DateOfBirth", DOB.Text));
+            str.Parameters.Add(new SqlParameter("@Gender", comboBox1.Text));
+            str.Parameters.Add(new SqlParameter("@Value", comboBox1.Text));
+
+
+            string abc = "INSERT into Advisor(Id, Designation, Salary) values ((Select Id From Person where Email=@Email),(Select Id FROM Lookup WHERE Category = 'Designation' AND Value=@Value),@Salary)";
             //// Add the parameters if required
             SqlCommand stri = new SqlCommand(abc, conn);
-            stri.Parameters.Add(new SqlParameter("@Id", textBox1.Text));
             stri.Parameters.Add(new SqlParameter("@Designation", Designation.Text));
             stri.Parameters.Add(new SqlParameter("@Salary", Salary.Text));
             stri.Parameters.Add(new SqlParameter("@Value", Designation.Text));
+            stri.Parameters.Add(new SqlParameter("@Email ", Em.Text));
 
 
-            int i = stri.ExecuteNonQuery();
-           
+
+            int i = str.ExecuteNonQuery();
+            int j = stri.ExecuteNonQuery();
             {
                 if (MessageBox.Show("Do You want to Register it", "Register", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -240,7 +253,7 @@ namespace ProjectA
                 {
                     //     conn.Open();
                     //create a query for retrieving data in the database.
-                    query = "SELECT * FROM Advisor";
+                    query = "SELECT Id, Designation, Salary from Advisor join Person ON Person.Id = Advisor.Id";
                     //initialize new Sql commands
                     //SqlCommand cmd = new SqlCommand();
                     //hold the data to be executed.

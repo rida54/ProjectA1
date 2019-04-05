@@ -88,5 +88,21 @@ namespace ProjectA
             query1.ShowDialog();
             this.Show();
         }
+
+        private void Reports_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Reports query1 = new Reports();
+            query1.ShowDialog();
+            this.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ProjectList query1 = new ProjectList();
+            query1.ShowDialog();
+            this.Show();
+        }
     }
 }

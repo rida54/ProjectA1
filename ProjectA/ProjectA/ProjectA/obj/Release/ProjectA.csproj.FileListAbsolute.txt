@@ -59,3 +59,5 @@ C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\A
 C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\bin\Release\itextsharp.xml
 C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\obj\Release\ProjectA.csprojAssemblyReference.cache
 C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\obj\Release\ProjectA.csproj.CopyComplete
+C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\obj\Release\ProjectA.ProjectList.resources
+C:\Users\Asus\Documents\GitHub\ProjectA\ProjectA\ProjectA\ProjectA\obj\Release\ProjectA.Reports.resources
