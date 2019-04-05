@@ -126,7 +126,8 @@ namespace ProjectA
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            try
+            {
             String con = "Data Source=DESKTOP-T3GNBBF\\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True";
             SqlConnection conn = new SqlConnection(con);
             conn.Open();
@@ -140,7 +141,12 @@ namespace ProjectA
             DataView query1 = new DataView();
             query1.ShowDialog();
             this.Show();
-
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("you cannot delete student from here because of its refrence ");
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

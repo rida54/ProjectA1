@@ -95,5 +95,32 @@ namespace ProjectA
             }
         
     }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String con = "Data Source=DESKTOP-T3GNBBF\\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True";
+                SqlConnection conn = new SqlConnection(con);
+                conn.Open();
+                string sql = "DELETE FROM GroupEvaluation WHERE GroupId = @GroupId";
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.Add(new SqlParameter("@Id", textBox7.Text));
+                command.ExecuteNonQuery();
+                dataGridView1.DataSource = null;
+                Evaluations_Load(sender, e);
+
+                this.Hide();
+                Evaluations query2 = new Evaluations();
+                query2.ShowDialog();
+                this.Show();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("you cannot delete group from here because of its refrence ");
+            }
+        }
     }
+    
 }

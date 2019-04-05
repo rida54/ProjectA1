@@ -92,5 +92,32 @@ namespace ProjectA
             abc.ShowDialog();
             this.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String con = "Data Source=DESKTOP-T3GNBBF\\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True";
+                SqlConnection conn = new SqlConnection(con);
+                conn.Open();
+                string sql = "DELETE FROM GroupStudent WHERE GroupId = @GroupID";
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.Add(new SqlParameter("@Id", textBox1.Text));
+                command.ExecuteNonQuery();
+                dataGridView1.DataSource = null;
+                View_Load(sender, e);
+
+                this.Hide();
+                GroupStudent query2 = new GroupStudent();
+                query2.ShowDialog();
+                this.Show();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("you cannot delete group from here because of its refrence ");
+            }
+        }
     }
-}
+    }
+

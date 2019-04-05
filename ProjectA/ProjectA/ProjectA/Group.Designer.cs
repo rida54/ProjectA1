@@ -184,6 +184,7 @@
             this.button5.TabIndex = 2;
             this.button5.Text = "Delete";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel3
             // 
@@ -210,7 +211,7 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(250, 30);
             this.tableLayoutPanel5.TabIndex = 45;
             // 
-            // GroupStudent
+            // Group
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -222,7 +223,7 @@
             this.Controls.Add(this.gvStudent);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "GroupStudent";
+            this.Name = "Group";
             this.Text = "GroupId";
             this.Load += new System.EventHandler(this.GroupStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvStudent)).EndInit();

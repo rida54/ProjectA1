@@ -149,5 +149,33 @@ namespace ProjectA
        
         
     }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            {
+                try
+                {
+                    String con = "Data Source=DESKTOP-T3GNBBF\\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True";
+                    SqlConnection conn = new SqlConnection(con);
+                    conn.Open();
+                    string sql = "DELETE FROM GroupProject WHERE ProjectId = @ID";
+                    SqlCommand command = new SqlCommand(sql, conn);
+                    command.Parameters.Add(new SqlParameter("@Id", textBox5.Text));
+                    command.ExecuteNonQuery();
+                    gvProject.DataSource = null;
+                    ProjectAss_Load(sender, e);
+
+                    this.Hide();
+                    GroupStudent query2 = new GroupStudent();
+                    query2.ShowDialog();
+                    this.Show();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("you cannot delete group from here because of its refrence ");
+                }
+            }
+        }
     }
 }
