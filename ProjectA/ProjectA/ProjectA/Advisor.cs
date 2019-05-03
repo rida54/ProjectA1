@@ -167,7 +167,7 @@ namespace ProjectA
             SqlCommand command = new SqlCommand(cmd, conn);
             // Add the parameters if required
 
-            string query = "INSERT into Person(FirstName , LastName , Contact , Email , DateOfBirth , Gender) values (@FirstName ,@LastName, @Contact , @Email, @DateOfBirth, (Select Id FROM Lookup WHERE Category = 'Gender' AND Value=@Value))";
+            string query = "INSERT into Person(FirstName , LastName , Contact , Email , Gender) values (@FirstName ,@LastName, @Contact , @Email, (Select Id FROM Lookup WHERE Category = 'Gender' AND Value=@Value))";
             SqlCommand str = new SqlCommand(query, conn);
             //// Add the parameters if required
 
@@ -175,7 +175,7 @@ namespace ProjectA
             str.Parameters.Add(new SqlParameter("@LastName", LastName.Text));
             str.Parameters.Add(new SqlParameter("@Contact", Contact.Text));
             str.Parameters.Add(new SqlParameter("@Email ", Em.Text));
-            str.Parameters.Add(new SqlParameter("@DateOfBirth", DOB.Text));
+   
             str.Parameters.Add(new SqlParameter("@Gender", comboBox1.Text));
             str.Parameters.Add(new SqlParameter("@Value", comboBox1.Text));
 

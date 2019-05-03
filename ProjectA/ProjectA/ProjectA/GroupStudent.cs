@@ -28,12 +28,12 @@ namespace ProjectA
             conn.Open();
             SqlCommand command = new SqlCommand(cmd, conn);
            
-            string query = "INSERT into GroupStudent(GroupId, StudentId, Status, AssignmentDate) values ((Select Id from [Group] WHERE Id = '" + textBox5.Text + "'),(Select Id from [Student] WHERE Id = '" + textBox6.Text + "'),(Select Id FROM Lookup WHERE Category ='Status' AND Value=@Value), @AssignmentDate)";
+            string query = "INSERT into GroupStudent(GroupId, StudentId, Status) values ((Select Id from [Group] WHERE Id = '" + textBox5.Text + "'),(Select Id from [Student] WHERE Id = '" + textBox6.Text + "'),(Select Id FROM Lookup WHERE Category ='Status' AND Value=@Value), )";
             SqlCommand str = new SqlCommand(query, conn);
             // Add the parameters if required
 
             str.Parameters.Add(new SqlParameter("@Status", comboBox1.Text));
-            str.Parameters.Add(new SqlParameter("@AssignmentDate", DateTime.Parse(textBox3.Text)));
+           
             str.Parameters.Add(new SqlParameter("@Value", comboBox1.Text));
             str.Parameters.Add(new SqlParameter("@Created_On", DateTime.Parse(textBox1.Text)));
             int i = str.ExecuteNonQuery();

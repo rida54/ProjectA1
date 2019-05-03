@@ -48,7 +48,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button5 = new System.Windows.Forms.Button();
             this.dataViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
@@ -257,8 +256,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(238, 29);
             this.tableLayoutPanel3.TabIndex = 24;
             // 
-            
-            // 
             // dataViewBindingSource
             // 
             this.dataViewBindingSource.DataSource = typeof(ProjectA.DataView);
@@ -275,7 +272,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(771, 450);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -322,6 +318,5 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button5;
     }
 }

@@ -41,16 +41,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Designation = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Salary = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.DOB = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,16 +54,21 @@
             this.label11 = new System.Windows.Forms.Label();
             this.FirstName = new System.Windows.Forms.TextBox();
             this.LastName = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Designation = new System.Windows.Forms.ComboBox();
+            this.Salary = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvAdvisor)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -227,66 +225,14 @@
             this.panel3.Size = new System.Drawing.Size(239, 258);
             this.panel3.TabIndex = 47;
             // 
-            // Designation
-            // 
-            this.Designation.Location = new System.Drawing.Point(92, 3);
-            this.Designation.Name = "Designation";
-            this.Designation.Size = new System.Drawing.Size(135, 21);
-            this.Designation.TabIndex = 38;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Designation";
-            // 
-            // Salary
-            // 
-            this.Salary.Location = new System.Drawing.Point(92, 31);
-            this.Salary.Name = "Salary";
-            this.Salary.Size = new System.Drawing.Size(136, 20);
-            this.Salary.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Salary";
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.BackColor = System.Drawing.Color.LightYellow;
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.7234F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.2766F));
-            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.Designation, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.Salary, 1, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 22);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.90909F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.09091F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(232, 56);
-            this.tableLayoutPanel4.TabIndex = 46;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.LightYellow;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.7931F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.2069F));
-            this.tableLayoutPanel3.Controls.Add(this.DOB, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.comboBox1, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label7, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 185);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
@@ -296,16 +242,9 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(232, 57);
             this.tableLayoutPanel3.TabIndex = 49;
             // 
-            // DOB
-            // 
-            this.DOB.Location = new System.Drawing.Point(92, 3);
-            this.DOB.Name = "DOB";
-            this.DOB.Size = new System.Drawing.Size(137, 20);
-            this.DOB.TabIndex = 36;
-            // 
             // comboBox1
             // 
-            this.comboBox1.Location = new System.Drawing.Point(92, 36);
+            this.comboBox1.Location = new System.Drawing.Point(92, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(135, 21);
             this.comboBox1.TabIndex = 37;
@@ -313,20 +252,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 33);
+            this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 13);
             this.label7.TabIndex = 31;
             this.label7.Text = "Gender";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "DateOfBirth";
             // 
             // tableLayoutPanel2
             // 
@@ -408,7 +338,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 24);
+            this.label11.Location = new System.Drawing.Point(3, 23);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 13);
             this.label11.TabIndex = 27;
@@ -423,10 +353,60 @@
             // 
             // LastName
             // 
-            this.LastName.Location = new System.Drawing.Point(91, 27);
+            this.LastName.Location = new System.Drawing.Point(91, 26);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(137, 20);
             this.LastName.TabIndex = 33;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.LightYellow;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.7234F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.2766F));
+            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.Designation, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.Salary, 1, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 22);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.90909F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.09091F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(232, 56);
+            this.tableLayoutPanel4.TabIndex = 46;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Designation";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Salary";
+            // 
+            // Designation
+            // 
+            this.Designation.Location = new System.Drawing.Point(92, 3);
+            this.Designation.Name = "Designation";
+            this.Designation.Size = new System.Drawing.Size(135, 21);
+            this.Designation.TabIndex = 38;
+            // 
+            // Salary
+            // 
+            this.Salary.Location = new System.Drawing.Point(92, 31);
+            this.Salary.Name = "Salary";
+            this.Salary.Size = new System.Drawing.Size(136, 20);
+            this.Salary.TabIndex = 7;
             // 
             // Advisor
             // 
@@ -450,14 +430,14 @@
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -477,10 +457,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox DOB;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;

@@ -35,8 +35,6 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -117,22 +115,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 53;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(174, 242);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 52;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 249);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "AssignmentDate";
             // 
             // label4
             // 
@@ -273,8 +255,6 @@
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
             this.Name = "GroupStudent";
@@ -301,8 +281,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;

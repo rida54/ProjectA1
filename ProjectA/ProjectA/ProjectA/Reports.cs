@@ -55,15 +55,17 @@ namespace ProjectA
                 {
 
                     for (int j = 0; j < cell2; j++)
-                        if (dataGridView1.Rows[1].Cells[j].Value == null)
+                    {
+                        if (dataGridView1.Rows[i].Cells[j].Value == null)
                         {
                             dataGridView1.Rows[i].Cells[j].Value = "null";
                         }
-                    pdfTable.AddCell(dataGridView1.Rows[i].Cells[j].Value.ToString());
-                    this.dataGridView1.Columns[1].Width = 150;
+                        pdfTable.AddCell(dataGridView1.Rows[i].Cells[j].Value.ToString());
+                        this.dataGridView1.Columns[1].Width = 150;
+                    }
 
                 }
-                //Adding DataRow
+                
                 //foreach (DataGridViewRow row in dataGridView1.Rows)
                 //{
                 //    foreach (DataGridViewCell cell in row.Cells)
@@ -88,6 +90,7 @@ namespace ProjectA
                     pdfDoc.Close();
                     stream.Close();
                 }
+                MessageBox.Show("Report is generated succesfully!!");
 
             }
 
@@ -98,8 +101,9 @@ namespace ProjectA
             object con = null;
             SqlConnection conn = new SqlConnection(cmd);
             conn.Open();
-            // String str = "SELECT StudentId, TotalMarks, ProjectId from GroupStudent join person ON person.Id = GroupStudent.StudentId join GroupEvaluation ON GroupEvaluation.GroupId = GroupStudent.GroupId Join Evaluation ON Evaluation.Id = GroupEvaluation.EvaluationId JOIN GroupProject ON GroupProject.ProjectId = GroupEvaluation.GroupId";
+            //String str = "SELECT StudentId, TotalMarks, ProjectId from GroupStudent join person ON person.Id = GroupStudent.StudentId join GroupEvaluation ON GroupEvaluation.GroupId = GroupStudent.GroupId Join Evaluation ON Evaluation.Id = GroupEvaluation.EvaluationId JOIN GroupProject ON GroupProject.ProjectId = GroupEvaluation.GroupId";
             String str = "SELECT *From Evaluation";
+            // String str = "SELECT Title AS 'Project Title', FirstName + ' ' + LastName AS 'Student Name' , RegistrationNo AS 'Registration No', Evaluation.Name AS 'Evaluation Name', Evaluation.TotalMarks AS 'Total Marks', GroupEvaluation.ObtainedMarks AS 'Obtained Marks', TotalWeightage AS 'Total Weightage'  FROM (((((GroupEvaluation JOIN Evaluation ON EvaluationId = Id) JOIN GroupStudent ON GroupStudent.GroupId = GroupEvaluation.GroupId) JOIN Student ON StudentId = Student.Id ) JOIN Person ON Person.Id = Student.Id) JOIN GroupProject ON GroupProject.GroupId = GroupStudent.GroupId) JOIN Project ON Project.Id = GroupProject.ProjectId where EvaluationDate > GroupStudent.AssignmentDate";
             SqlCommand command = new SqlCommand(str, conn);
             // Add the parameters if required
             //SqlDataReader reader = command.ExecuteReader();
